@@ -14,7 +14,7 @@ type Config struct {
 		User     string `mapstructure:"user"`
 		Password string `mapstructure:"password"`
 		Host     string `mapstructure:"host"`
-		DbName   string `mapstructure:"dbName`
+		Dbname   string `mapstructure:"dbname"`
 	} `mapstructure:"databases"`
 }
 
@@ -43,6 +43,6 @@ func main() {
 	fmt.Println("Config port::", config.Server.Port)
 
 	for _, db := range config.DataBases {
-		fmt.Printf("database name: %s, user: %s, password: %s \n", db.DbName, db.User, db.Password)
+		fmt.Printf("database name: %s, user: %s, password: %s \n", db.Dbname, db.User, db.Password)
 	}
 }

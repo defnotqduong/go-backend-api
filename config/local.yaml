@@ -1,28 +1,20 @@
 server:
   port: 8080
 
-databases:
-  - user: admin
-    password: admin
-    host: localhost
-    dbName: shop
-  - user: user
-    password: user
-    host: localhost
-    dbName: user
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: 12345
+  dbname: shop
+  maxIdleConns: 10
+  maxOpenConns: 100
+  connMaxLifetime: 3600
 
-security:
-  jwt:
-    key: abc123
-
-redis:
-  user: admin
-
-elasticsearch:
-  user: admin
-
-rabbitMQ:
-  user: admin
-
-kafka:
-  user: admin
+logger:
+  log_level: debug
+  file_log_name: "./storages/logs/dev.log"
+  max_size: 500
+  max_backups: 3
+  max_age: 28
+  compress: true

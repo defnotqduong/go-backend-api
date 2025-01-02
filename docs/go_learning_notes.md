@@ -49,3 +49,6 @@
   - Khi nào dùng sugar và khi nào dùng logger:
 
 - Viper là một thư viện Go mạnh mẽ để quản lý cấu hình. Nó hỗ trợ nhiều loại định dạng file cấu hình như JSON, YAML, TOML, HCL, INI, và cũng có thể lấy cấu hình từ biến môi trường, cờ dòng lệnh, hay thậm chí là một cơ sở dữ liệu. Viper giúp làm cho việc quản lý cấu hình dễ dàng hơn trong các ứng dụng Go.
+
+- Dùng require để test nếu faild các hàm bên dưới không thực thi
+- Dùng assert để test nếu faild các hàm bên dưới vẫn thực thi
