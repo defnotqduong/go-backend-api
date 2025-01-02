@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+databases:
+  - user: admin
+    password: admin
+    host: localhost
+    dbName: shop
+  - user: user
+    password: user
+    host: localhost
+    dbName: user
+
+security:
+  jwt:
+    key: abc123
+
+redis:
+  user: admin
+
+elasticsearch:
+  user: admin
+
+rabbitMQ:
+  user: admin
+
+kafka:
+  user: admin
