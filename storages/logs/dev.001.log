@@ -9,3 +9,10 @@
 {"level":"ERROR","time":"2025-01-02T20:16:44.581+0700","caller":"initialize/mysql.go:16","msg":"InitMysql initialization error","error":"Error 1049 (42000): Unknown database 'shopGO'","stacktrace":"go/go-backend-api/internal/initialize.checkErrorPanic\n\tE:/go/go-backend-api/internal/initialize/mysql.go:16\ngo/go-backend-api/internal/initialize.InitMysql\n\tE:/go/go-backend-api/internal/initialize/mysql.go:30\ngo/go-backend-api/internal/initialize.Run\n\tE:/go/go-backend-api/internal/initialize/run.go:18\nmain.main\n\tE:/go/go-backend-api/cmd/server/main.go:13\nruntime.main\n\tD:/Program Files/Go/src/runtime/proc.go:272"}
 {"level":"INFO","time":"2025-01-02T20:17:03.228+0700","caller":"initialize/run.go:17","msg":"Config Log ok!!","ok":"success"}
 {"level":"INFO","time":"2025-01-02T20:17:03.248+0700","caller":"initialize/mysql.go:32","msg":"Initializing MySQL successfully"}
+{"level":"INFO","time":"2025-01-03T17:34:26.368+0700","caller":"initialize/run.go:17","msg":"Config Log ok!!","ok":"success"}
+{"level":"INFO","time":"2025-01-03T17:34:26.812+0700","caller":"initialize/mysql.go:32","msg":"Initializing MySQL successfully"}
+{"level":"INFO","time":"2025-01-03T17:39:36.575+0700","caller":"initialize/run.go:17","msg":"Config Log ok!!","ok":"success"}
+{"level":"INFO","time":"2025-01-03T17:39:36.647+0700","caller":"initialize/mysql.go:32","msg":"Initializing MySQL successfully"}
+{"level":"INFO","time":"2025-01-03T17:45:13.858+0700","caller":"initialize/run.go:17","msg":"Config Log ok!!","ok":"success"}
+{"level":"INFO","time":"2025-01-03T17:45:14.008+0700","caller":"initialize/mysql.go:32","msg":"Initializing MySQL successfully"}
+{"level":"INFO","time":"2025-01-03T17:45:14.503+0700","caller":"initialize/redis.go:51","msg":"value score is::","score":"100"}
