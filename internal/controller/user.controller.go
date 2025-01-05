@@ -8,16 +8,24 @@ import (
 )
 
 type UserController struct {
-	userService *service.UserService
+	userService service.IUserService
 }
 
-func NewUserController() *UserController {
+func NewUserController(userService service.IUserService) *UserController {
 	return &UserController{
-		userService: service.NewUserService(),
+		userService: userService,
 	}
 }
 
-func (uc *UserController) GetUserByID(c *gin.Context) {
-	userInfo := uc.userService.GetUserInfo()
-	response.SuccessResponse(c, response.ErrCodeSuccess, userInfo)
+func (uc *UserController) Register(c *gin.Context) {
+	result := uc.userService.Register("", "")
+
+	response.SuccessResponse(c, result, nil)
 }
+
+// func (uc *UserController) GetUserByID(c *gin.Context) {
+// 	userInfo := uc.userService.GetUserInfo()
+// 	response.SuccessResponse(c, response.ErrCodeSuccess, userInfo)
+// }
+
+// Interface version

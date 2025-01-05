@@ -112,7 +112,7 @@ func main() {
 
 	r.POST("action/stock", actionStock)
 
-	// đăng ký 2 user để mua Stock trobng ATC (1) (2)
+	// đăng ký 2 user để mua Stock trong ATC (1) (2)
 	go RegisterConsumerATC(1)
 	go RegisterConsumerATC(2)
 	go RegisterConsumerATC(3)
