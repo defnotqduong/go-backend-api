@@ -52,3 +52,6 @@
 
 - Dùng require để test nếu faild các hàm bên dưới không thực thi
 - Dùng assert để test nếu faild các hàm bên dưới vẫn thực thi
+
+- DUMP Database:
+  docker exec mydb mysqldump -uroot -p12345 --databases shopGO --add-drop-database --add-drop-table --add-drop-trigger --add-locks --no-data > migrations/shopGO.sql
