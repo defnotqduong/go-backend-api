@@ -12,13 +12,4 @@ func (pr *AdminRouter) InitAdminRouter(Router *gin.RouterGroup) {
 		adminRouterPublic.POST("/login")
 	}
 
-	// private router
-	adminRouterPrivate := Router.Group("/admin/user")
-	// adminRouterPrivate.User(limiter())
-	// adminRouterPrivate.Use(Auth())
-	// adminRouterPrivate.Use(Permission())
-	{
-		adminRouterPrivate.POST("/active_user")
-	}
-
 }

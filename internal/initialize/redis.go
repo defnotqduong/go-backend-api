@@ -27,26 +27,26 @@ func InitRedis() {
 		global.Logger.Error("Redis initialization Error: %w", zap.Error(err))
 	}
 
-	fmt.Println("Init Redis is running")
+	global.Logger.Info("Initializing Redis Successfully")
 	global.Rdb = rdb
 
-	redisExample()
+	// redisExample()
 }
 
-func redisExample() {
-	err := global.Rdb.Set(ctx, "score", 100, 0).Err()
+// func redisExample() {
+// 	err := global.Rdb.Set(ctx, "score", 100, 0).Err()
 
-	if err != nil {
-		fmt.Println("Error redis setting:", zap.Error(err))
-		return
-	}
+// 	if err != nil {
+// 		fmt.Println("Error redis setting:", zap.Error(err))
+// 		return
+// 	}
 
-	value, err := global.Rdb.Get(ctx, "score").Result()
+// 	value, err := global.Rdb.Get(ctx, "score").Result()
 
-	if err != nil {
-		fmt.Println("Error redis setting:", zap.Error(err))
-		return
-	}
+// 	if err != nil {
+// 		fmt.Println("Error redis setting:", zap.Error(err))
+// 		return
+// 	}
 
-	global.Logger.Info("value score is::", zap.String("score", value))
-}
+// 	global.Logger.Info("value score is::", zap.String("score", value))
+// }

@@ -6,12 +6,12 @@ COPY . .
 
 RUN go mod download
 
-RUN go build -o crm.shopGO.com ./cmd/server
+RUN go build -o crm.shopgo ./cmd/server
 
 FROM scratch
 
 COPY ./config /config
 
-COPY  --from=builder /build/crm.shopGO.com /
+COPY --from=builder /build/crm.shopgo /
 
-ENTRYPOINT [ "/crm.shopGO.com", "config/local.yaml" ]
+ENTRYPOINT [ "/crm.shopgo", "config/local.yaml" ]

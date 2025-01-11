@@ -60,7 +60,7 @@ func genTableDAO() {
 	// // gormdb, _ := gorm.Open(mysql.Open("root:@(127.0.0.1:3306)/demo?charset=utf8mb4&parseTime=True&loc=Local"))
 	g.UseDB(global.Mdb) // reuse your gorm db
 	// g.GenerateAllTable()
-	g.GenerateModel("go_crm_user")
+	// g.GenerateModel("go_crm_user")
 	// // Generate basic type-safe DAO API for struct `model.User` following conventions
 	// g.ApplyBasic(model.User{})
 
