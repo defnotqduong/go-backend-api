@@ -1,7 +1,9 @@
 package controller
 
 import (
+	"fmt"
 	"go/go-backend-api/internal/service"
+	"go/go-backend-api/internal/vo"
 	"go/go-backend-api/pkg/response"
 
 	"github.com/gin-gonic/gin"
@@ -18,8 +20,14 @@ func NewUserController(userService service.IUserService) *UserController {
 }
 
 func (uc *UserController) Register(c *gin.Context) {
-	result := uc.userService.Register("", "")
+	var params vo.UserRegistrationRequest
+	if err := c.ShouldBindJSON(&params); err != nil {
+		response.ErrorResponse(c, response.ErrCodeParamInvalid)
+		return
+	}
 
+	fmt.Printf("Email params: %s", params.Email)
+	result := uc.userService.Register(params.Email, params.Purpose)
 	response.SuccessResponse(c, result, nil)
 }
 
